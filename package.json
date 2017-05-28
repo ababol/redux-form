@@ -116,6 +116,7 @@
   },
   "files": [
     "README.md",
+    "src",
     "es",
     "lib",
     "dist",
