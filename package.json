@@ -2,7 +2,7 @@
   "name": "redux-form",
   "version": "6.7.0",
   "description": "A higher order component decorator for forms using Redux and React",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "module": "./es/index.js",
   "jsnext:main": "./es/index.js",
   "repository": {
@@ -33,6 +33,7 @@
     "example:syncValidation": "form=syncValidation npm run example",
     "example:wizard": "form=wizard npm run example",
     "format": "prettier-eslint \"+(src|examples)/**/*.js\" --ignore \"**/bundle.js\" --write --prettier.semi=false --prettier.trailingComma=none",
+    "prepublish": "npm run test && npm run clean && npm run build",
     "test": "mocha --compilers js:babel-register --recursive --recursive \"src/**/__tests__/*\" --require src/__tests__/setup.js",
     "test:watch": "npm test -- --watch",
     "test:cov": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm test",
@@ -116,7 +117,6 @@
   },
   "files": [
     "README.md",
-    "src",
     "es",
     "lib",
     "dist",
