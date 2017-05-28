@@ -86,7 +86,7 @@ const createReduxForm = structure => {
       touchOnBlur: true,
       touchOnChange: false,
       persistentSubmitErrors: false,
-      destroyOnUnmount: true,
+      destroyOnUnmount: false,
       shouldAsyncValidate: defaultShouldAsyncValidate,
       shouldValidate: defaultShouldValidate,
       enableReinitialize: false,
